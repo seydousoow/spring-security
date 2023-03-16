@@ -366,7 +366,7 @@ This can be customized by calling `setOrder` on the interceptor instances like s
 @Role(BeanDefinition.ROLE_INFRASTRUCTURE)
 Advisor postFilterAuthorizationMethodInterceptor() {
 	PostFilterAuthorizationMethodInterceptor interceptor = new PostFilterAuthorizationMethodInterceptor();
-	interceptor.setOrder(AuthorizationInterceptorOrders.POST_AUTHORIZE.getOrder() - 1);
+	interceptor.setOrder(AuthorizationInterceptorsOrder.POST_AUTHORIZE.getOrder() - 1);
 	return interceptor;
 }
 ----
@@ -378,7 +378,7 @@ Advisor postFilterAuthorizationMethodInterceptor() {
 @Role(BeanDefinition.ROLE_INFRASTRUCTURE)
 fun postFilterAuthorizationMethodInterceptor() : Advisor {
 	val interceptor = PostFilterAuthorizationMethodInterceptor();
-	interceptor.setOrder(AuthorizationInterceptorOrders.POST_AUTHORIZE.getOrder() - 1);
+	interceptor.setOrder(AuthorizationInterceptorsOrder.POST_AUTHORIZE.getOrder() - 1);
 	return interceptor;
 }
 ----
